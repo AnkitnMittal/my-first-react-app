@@ -6,23 +6,62 @@ import React, { useState } from 'react';
  */
 
 function Update() {
-  const [person, setPerson] = useState({ name: 'Ankit', age: 25 });
+  const [person, setPerson] = useState({
+    firstName: 'Ankit',
+    lastName: 'Mittal',
+    age: 25,
+  });
+
   const [value, setValue] = useState('');
 
+  const handleFirstNameChange = (e) => {
+    const newFirstName = e.target.value;
+    setPerson((prev) => ({ ...prev, firstName: newFirstName }));
+  };
+
+  const handleLastNameChange = (e) => {
+    const newLastName = e.target.value;
+    setPerson((prev) => ({ ...prev, lastName: newLastName }));
+  };
+
   const handleIncreaseAge = () => {
-    setPerson((prevPerson) => ({ ...prevPerson, age: prevPerson.age + 1 }));
+    setPerson((prev) => ({ ...prev, age: prev.age + 1 }));
   };
 
   return (
     <>
-      <h1>{person.name}</h1>
+      {/* Full Name updates automatically */}
+      <h1>
+        {person.firstName} {person.lastName}
+      </h1>
       <p>{person.age}</p>
+
       <button onClick={handleIncreaseAge}>Increase Age</button>
+
+      {/* First Name Input */}
       <input
         type="text"
+        placeholder="First Name"
+        value={person.firstName}
+        onChange={handleFirstNameChange}
+      />
+
+      {/* Last Name Input */}
+      <input
+        type="text"
+        placeholder="Last Name"
+        value={person.lastName}
+        onChange={handleLastNameChange}
+      />
+
+      {/* Existing Input */}
+      <input
+        type="text"
+        placeholder="Existing Input"
         value={value}
         onChange={(e) => setValue(e.target.value)}
-      ></input>
+      />
+
       <p>{value}</p>
     </>
   );
