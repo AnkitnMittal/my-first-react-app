@@ -5,3 +5,4 @@
 3. `Render.jsx` : Rendering multiple elements & conditionally render UI
 4. `State.jsx` : Introduction to state & hooks
 5. `Update.jsx` : More on states & updates
+6. `SideEffect.jsx` : Demonstrate interaction with the outside world
