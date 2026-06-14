@@ -2,10 +2,13 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 
-import './index.css';
-import './App.css';
+import './styles/index.css';
 
 import App from './App.jsx';
+import Basics from './Basics.jsx';
+import Intermediate from './Intermediate.jsx';
+import Advanced from './Advanced.jsx';
+
 import Greeting from './pages/Greeting.jsx';
 import Props from './pages/Props.jsx';
 import Render from './pages/Render.jsx';
@@ -20,32 +23,45 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: '/greeting',
-    element: <Greeting />,
+    path: '/basics',
+    element: <Basics />,
+    children: [
+      {
+        path: 'greeting',
+        element: <Greeting />,
+      },
+      {
+        path: 'props',
+        element: <Props />,
+      },
+      {
+        path: 'render',
+        element: <Render />,
+      },
+    ],
   },
   {
-    path: '/props',
-    element: <Props />,
+    path: '/intermediate',
+    element: <Intermediate />,
+    children: [
+      {
+        path: 'state',
+        element: <State />,
+      },
+      {
+        path: 'update',
+        element: <Update />,
+      },
+      {
+        path: 'side-effect',
+        element: <SideEffect />,
+      },
+    ],
   },
   {
-    path: '/render',
-    element: <Render />,
-  },
-  {
-    path: '/state',
-    element: <State />,
-  },
-  {
-    path: '/update',
-    element: <Update />,
-  },
-  {
-    path: '/side-effect',
-    element: <SideEffect />,
-  },
-  {
-    path: '/class',
-    element: <Class />,
+    path: '/advanced',
+    element: <Advanced />,
+    children: [{ path: '/class', element: <Class /> }],
   },
 ]);
 

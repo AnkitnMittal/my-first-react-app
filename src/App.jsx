@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
-import './App.css';
+import './styles/App.css';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,31 +30,17 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
 
-      <div>
-        <ul>
-          <li>
-            <Link to="greeting">Go to Greeting</Link>
-          </li>
-          <li>
-            <Link to="props">Go to Props</Link>
-          </li>
-          <li>
-            <Link to="render">Go to Render</Link>
-          </li>
-          <li>
-            <Link to="state">Go to State</Link>
-          </li>
-          <li>
-            <Link to="update">Go to Update</Link>
-          </li>
-          <li>
-            <Link to="side-effect">Go to Side Effect</Link>
-          </li>
-          <li>
-            <Link to="class">Go to Class</Link>
-          </li>
-        </ul>
-      </div>
+      <ul>
+        <li>
+          <Link to="basics">Go to Basics</Link>
+        </li>
+        <li>
+          <Link to="intermediate">Go to Intermediate</Link>
+        </li>
+        <li>
+          <Link to="advanced">Go to Advanced</Link>
+        </li>
+      </ul>
     </>
   );
 }

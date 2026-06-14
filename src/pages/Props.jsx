@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router';
 
 /*
@@ -59,6 +58,7 @@ function Props() {
           onClick={() => handleClickURL('https://www.github.com')}
         />
       </Wrapper>
+
       <div>
         <p>This is the Props Page</p>
         <Link to="/">Go back to Home</Link>

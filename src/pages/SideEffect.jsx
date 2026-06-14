@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router';
 
 function SideEffect() {
@@ -17,6 +17,7 @@ function SideEffect() {
   return (
     <>
       <p>{counter} seconds have passed.</p>
+
       <div>
         <p>This is the SideEffect Page</p>
         <Link to="/">Go back to Home</Link>

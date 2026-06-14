@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router';
 
 /** State Management:
@@ -64,6 +64,7 @@ function Update() {
       />
 
       <p>{value}</p>
+
       <div>
         <p>This is the Update Page</p>
         <Link to="/">Go back to Home</Link>

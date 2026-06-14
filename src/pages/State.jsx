@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router';
 
 /*
@@ -43,6 +43,7 @@ function State() {
 
         <p>Count: {count}</p>
       </div>
+
       <div>
         <p>This is the State Page</p>
         <Link to="/">Go back to Home</Link>

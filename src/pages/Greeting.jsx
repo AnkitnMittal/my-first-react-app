@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router';
 
 /*
@@ -30,6 +29,7 @@ function Greeting() {
           <li>Favorite Color: Blue</li>
         </ul>
       </div>
+
       <div>
         <p>This is the Greeting Page</p>
         <Link to="/">Go back to Home</Link>
