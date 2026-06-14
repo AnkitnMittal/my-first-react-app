@@ -1,11 +1,56 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
+import { createBrowserRouter, RouterProvider } from 'react-router';
 
+import './index.css';
+import './App.css';
+
+import App from './App.jsx';
+import Greeting from './pages/Greeting.jsx';
+import Props from './pages/Props.jsx';
+import Render from './pages/Render.jsx';
+import State from './pages/State.jsx';
+import Update from './pages/Update.jsx';
+import SideEffect from './pages/SideEffect.jsx';
 import Class from './pages/Class.jsx';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+  },
+  {
+    path: '/greeting',
+    element: <Greeting />,
+  },
+  {
+    path: '/props',
+    element: <Props />,
+  },
+  {
+    path: '/render',
+    element: <Render />,
+  },
+  {
+    path: '/state',
+    element: <State />,
+  },
+  {
+    path: '/update',
+    element: <Update />,
+  },
+  {
+    path: '/side-effect',
+    element: <SideEffect />,
+  },
+  {
+    path: '/class',
+    element: <Class />,
+  },
+]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Class />
+    <RouterProvider router={router} />
   </StrictMode>,
 );

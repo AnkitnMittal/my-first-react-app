@@ -7,3 +7,4 @@
 5. `Update.jsx` : More on states & updates
 6. `SideEffect.jsx` : Demonstrate interaction with the outside world
 7. `Class.jsx` : Class based components
+8. `main.jsx` : React Router
