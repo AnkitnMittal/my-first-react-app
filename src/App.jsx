@@ -29,9 +29,31 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
       <div>
-        <p>This is the App Page</p>
-        <Link to="/">Go back to Home</Link>
+        <ul>
+          <li>
+            <Link to="greeting">Go to Greeting</Link>
+          </li>
+          <li>
+            <Link to="props">Go to Props</Link>
+          </li>
+          <li>
+            <Link to="render">Go to Render</Link>
+          </li>
+          <li>
+            <Link to="state">Go to State</Link>
+          </li>
+          <li>
+            <Link to="update">Go to Update</Link>
+          </li>
+          <li>
+            <Link to="side-effect">Go to Side Effect</Link>
+          </li>
+          <li>
+            <Link to="class">Go to Class</Link>
+          </li>
+        </ul>
       </div>
     </>
   );
