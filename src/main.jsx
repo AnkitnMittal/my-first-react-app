@@ -61,7 +61,7 @@ const router = createBrowserRouter([
   {
     path: '/advanced',
     element: <Advanced />,
-    children: [{ path: '/class', element: <Class /> }],
+    children: [{ path: 'class', element: <Class /> }],
   },
 ]);
 
