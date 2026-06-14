@@ -5,20 +5,20 @@ import { createBrowserRouter, RouterProvider } from 'react-router';
 import './styles/index.css';
 
 import App from './App.jsx';
-import Login from './home/Login.jsx';
-import Basics from './home/Basics.jsx';
-import Intermediate from './home/Intermediate.jsx';
-import Advanced from './home/Advanced.jsx';
-import NotFoundPage from './home/NotFoundPage.jsx';
+import Login from './layouts/Login.jsx';
+import Basics from './layouts/Basics.jsx';
+import Intermediate from './layouts/Intermediate.jsx';
+import Advanced from './layouts/Advanced.jsx';
+import NotFoundPage from './pages/NotFoundPage.jsx';
 
 import Profile from './pages/Profile.jsx';
-import Greeting from './pages/Greeting.jsx';
-import Props from './pages/Props.jsx';
-import Render from './pages/Render.jsx';
-import State from './pages/State.jsx';
-import Update from './pages/Update.jsx';
-import SideEffect from './pages/SideEffect.jsx';
-import Class from './pages/Class.jsx';
+import Greeting from './components/Greeting.jsx';
+import Props from './components/Props.jsx';
+import Render from './components/Render.jsx';
+import State from './components/State.jsx';
+import Update from './components/Update.jsx';
+import SideEffect from './components/SideEffect.jsx';
+import Class from './components/Class.jsx';
 
 const router = createBrowserRouter([
   {
