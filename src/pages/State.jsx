@@ -1,10 +1,11 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router';
+
 /*
 The useState Hook provides those two things:
   A state variable to retain the data between renders.
   A state setter function to update the variable and trigger React to render the component again.
 */
-
-import React, { useState } from 'react';
 
 const COLORS = ['pink', 'green', 'blue', 'yellow', 'purple'];
 
@@ -22,25 +23,31 @@ function State() {
   };
 
   return (
-    <div
-      className="App"
-      style={{
-        backgroundColor,
-      }}
-    >
-      {COLORS.map((color) => (
-        <button
-          type="button"
-          key={color}
-          onClick={onButtonClick(color)}
-          className={backgroundColor === color ? 'selected' : ''}
-        >
-          {color}
-        </button>
-      ))}
+    <>
+      <div
+        className="App"
+        style={{
+          backgroundColor,
+        }}
+      >
+        {COLORS.map((color) => (
+          <button
+            type="button"
+            key={color}
+            onClick={onButtonClick(color)}
+            className={backgroundColor === color ? 'selected' : ''}
+          >
+            {color}
+          </button>
+        ))}
 
-      <p>Count: {count}</p>
-    </div>
+        <p>Count: {count}</p>
+      </div>
+      <div>
+        <p>This is the State Page</p>
+        <Link to="/">Go back to Home</Link>
+      </div>
+    </>
   );
 }
 

@@ -1,4 +1,5 @@
-import { Fragment } from 'react';
+import React from 'react';
+import { Link } from 'react-router';
 
 const persons = [
   { id: crypto.randomUUID(), name: 'John', age: 30 },
@@ -40,6 +41,10 @@ function Render() {
     <>
       <h1>Render</h1>
       <List />
+      <div>
+        <p>This is the Render Page</p>
+        <Link to="/">Go back to Home</Link>
+      </div>
     </>
   );
 }

@@ -1,3 +1,6 @@
+import React from 'react';
+import { Link } from 'react-router';
+
 /*
     Defines a Button component that takes in props for text, color, and fontSize.
     Another pattern is to use prop destructuring to directly extract the props in the function parameters,
@@ -41,20 +44,26 @@ function Props() {
   };
 
   return (
-    <Wrapper>
-      <Button
-        text="Button 1"
-        color="blue"
-        fontSize="12"
-        onClick={handleClick}
-      />
-      <Button
-        text="Button 2"
-        color="green"
-        fontSize="12"
-        onClick={() => handleClickURL('https://www.github.com')}
-      />
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Button
+          text="Button 1"
+          color="blue"
+          fontSize="12"
+          onClick={handleClick}
+        />
+        <Button
+          text="Button 2"
+          color="green"
+          fontSize="12"
+          onClick={() => handleClickURL('https://www.github.com')}
+        />
+      </Wrapper>
+      <div>
+        <p>This is the Props Page</p>
+        <Link to="/">Go back to Home</Link>
+      </div>
+    </>
   );
 }
 

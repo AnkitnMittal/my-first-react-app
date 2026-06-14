@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router';
 
 function SideEffect() {
   const [counter, setCounter] = useState(0);
@@ -13,7 +14,15 @@ function SideEffect() {
     };
   }, []);
 
-  return <p>{counter} seconds have passed.</p>;
+  return (
+    <>
+      <p>{counter} seconds have passed.</p>
+      <div>
+        <p>This is the SideEffect Page</p>
+        <Link to="/">Go back to Home</Link>
+      </div>
+    </>
+  );
 }
 
 export default SideEffect;

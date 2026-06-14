@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router';
 
 /** State Management:
  * State updates only during component re-rendering, not during event handling.
@@ -63,6 +64,10 @@ function Update() {
       />
 
       <p>{value}</p>
+      <div>
+        <p>This is the Update Page</p>
+        <Link to="/">Go back to Home</Link>
+      </div>
     </>
   );
 }
