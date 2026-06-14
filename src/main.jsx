@@ -5,10 +5,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router';
 import './styles/index.css';
 
 import App from './App.jsx';
-import Basics from './Basics.jsx';
-import Intermediate from './Intermediate.jsx';
-import Advanced from './Advanced.jsx';
+import Login from './home/Login.jsx';
+import Basics from './home/Basics.jsx';
+import Intermediate from './home/Intermediate.jsx';
+import Advanced from './home/Advanced.jsx';
+import NotFoundPage from './home/NotFoundPage.jsx';
 
+import Profile from './pages/Profile.jsx';
 import Greeting from './pages/Greeting.jsx';
 import Props from './pages/Props.jsx';
 import Render from './pages/Render.jsx';
@@ -23,7 +26,17 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: '/basics',
+    path: 'login',
+    element: <Login />,
+    children: [
+      {
+        path: ':name',
+        element: <Profile />,
+      },
+    ],
+  },
+  {
+    path: 'basics',
     element: <Basics />,
     children: [
       {
@@ -41,7 +54,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: '/intermediate',
+    path: 'intermediate',
     element: <Intermediate />,
     children: [
       {
@@ -59,9 +72,13 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: '/advanced',
+    path: 'advanced',
     element: <Advanced />,
     children: [{ path: 'class', element: <Class /> }],
+  },
+  {
+    path: '*',
+    element: <NotFoundPage />,
   },
 ]);
 

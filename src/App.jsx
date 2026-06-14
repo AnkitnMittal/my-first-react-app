@@ -32,6 +32,9 @@ function App() {
 
       <ul>
         <li>
+          <Link to="login">Go to Profile</Link>
+        </li>
+        <li>
           <Link to="basics">Go to Basics</Link>
         </li>
         <li>
